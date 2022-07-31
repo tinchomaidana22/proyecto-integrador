@@ -26,11 +26,13 @@
 
 .nav-bar {
   background-color: mediumaquamarine;
+  order: 2;
 
   &__nav-list {
     display: flex;
     list-style-type: none;
     justify-content: center;
+    height: 10vh;
 
     @media (max-width: 768px) {
       & {
@@ -41,7 +43,7 @@
 
   &__nav-item {
     text-align: center;
-    background-color: pink;
+    padding: 20px;
   }
 
   &__nav-link {
@@ -50,6 +52,8 @@
     color: #fff;
     padding: 1em 2em;
     text-decoration: none;
+    height: 100%;
+    text-align: center;
   }
 
   @media (max-width: 768px) {
@@ -71,7 +75,8 @@
   }
 
   &__logo-container {
-    background-color: yellow;
+    content: url(../../img/logos/logo.png);
+    width: 15vw;
   }
 
   &__form-container {
