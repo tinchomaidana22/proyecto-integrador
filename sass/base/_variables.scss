@@ -1,9 +1,2 @@
 $colorHeader: white;
 
-@mixin transition($in) {
-	transition:$in;
-	-webkit-transition:$in;
-	-moz-transition:$in;
-	-o-transition:$in;
-	-ms-transition:$in;
-}
