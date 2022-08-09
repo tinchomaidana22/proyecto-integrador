@@ -22,9 +22,9 @@
 /*****NAVBAR***/
 
 .nav-bar {
-  background-color: #f1f2f3;
+  /* background-color:; */
   order: 2;
-  border: 2px solid #ccc;
+  /* border: 2px solid #ccc; */
   height: 5vh;
   display: flex;
   align-items: center;
@@ -52,7 +52,7 @@
     transition: all .5s;
 
     &:hover{
-      background-color: rgb(29, 29, 29);
+      /* background-color: rgb(29, 29, 29); */
       border-radius: 15px;
       color: white;
       padding: 8px;
@@ -83,7 +83,7 @@
 
 /***SEARCH BAR***/
 .search-bar {
-  background-color: $colorHeader;
+  /* background-color: $colorHeader; */
  /*  display: flex;
   justify-content: space-between; */
   height: 10vh;
@@ -94,6 +94,10 @@
     align-items: center;
     padding: 0;
     width: 100vw;
+
+    img {
+      padding: 5px;
+    }
   }
 
   &__form-container {
@@ -142,7 +146,7 @@
     background-image: url(../../img/logos/carrito.svg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 130px;
+    background-size: 130px; 
     flex: 0 0 5em;
     height: 100%;
   }
@@ -260,7 +264,7 @@
 //Menu TOGGLE
 
 .menu-toggle {
-  background-color: red;
+  /* background-color: red; */
   cursor: pointer;
   display: none;
   flex: 0 0 3em;
