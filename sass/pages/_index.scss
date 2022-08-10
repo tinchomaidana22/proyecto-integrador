@@ -5,6 +5,9 @@ body{
 
 .section-cards{
     padding: 1em;
+    &__header{
+        margin: 10px;
+    }
 }
 
 .cards-container {

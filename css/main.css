@@ -304,6 +304,9 @@ body {
 .section-cards {
   padding: 1em;
 }
+.section-cards__header {
+  margin: 10px;
+}
 
 .cards-container {
   display: flex;
@@ -319,8 +322,9 @@ body {
 
 .card {
   background: #519872;
+  border: 1px solid #e9806e;
   border-radius: 1em;
-  box-shadow: 0px 7px 20px rgba(43, 8, 37, 0.2);
+  box-shadow: 0px 0px 15px #e9806e;
   display: flex;
   align-items: flex-end;
   flex-grow: 1;
