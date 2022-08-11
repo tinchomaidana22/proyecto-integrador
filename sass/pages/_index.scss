@@ -1,13 +1,14 @@
 @import '../base/variables';
-body{
-    background-color:$white;
-}
 
+body{
+    background-image: url(../../img/fondo/fondo.png);
+}
 .section-cards{
     padding: 1em;
     &__header{
         margin: 10px;
     }
+    
 }
 
 .cards-container {
