@@ -21,10 +21,9 @@
 
 .nav-bar {
   align-items: center;
-  background: rgb(252,252,252);
-  background: linear-gradient(180deg, rgba(252,252,252,1) 35%, rgba(238,255,237,1) 72%);
   background: rgb(238,238,238);
   background: linear-gradient(180deg, rgba(238,238,238,1) 42%, rgba(238,255,237,1) 75%);
+  border-bottom: $light-green;
   display: flex;
   height: 5vh;
   justify-content: center;
