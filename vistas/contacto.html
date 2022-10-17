@@ -1,79 +1,27 @@
-<!DOCTYPE html>
-    <html lang='es'>
-    <head>
-        <meta charset='UTF-8'>
-        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-
-        <link rel='stylesheet' href='css/main.css'>
-        <title>Contacto</title>
-    </head>
-    <body>
-        <header class="main-header">
-            <input type="checkbox" id="menu" />
-      
-            <nav class="nav-bar">
-              <ul class="nav-bar__nav-list">
-                <li class="nav-bar__nav-item">
-                  <a href="index.html" class="nav-bar__nav-link"> Inicio </a>
-                </li>
-                <li class="nav-bar__nav-item">
-                  <a href="#" class="nav-bar__nav-link"> Alta </a>
-                </li>
-                <li class="nav-bar__nav-item">
-                  <a href="contacto.html" class="nav-bar__nav-link"> Contacto </a>
-                </li>
-                <li class="nav-bar__nav-item">
-                  <a href="nosotros.html" class="nav-bar__nav-link"> Nosotros </a>
-                </li>
-              </ul>
-            </nav>
-
-            <div class="search-bar">
-                <div class="search-bar__logo-container"><img src="../../img/logos/logo.png" alt="congelados escobar"></div>
-                <form action="" class="search-bar__form-container">
-                  <label for="busqueda" class="search-bar__form-label">Buscar</label>
-                  <input type="search" class="search-bar__form-search" id="busqueda" />
-                  <input type="submit" class="search-bar__form-submit" value="Buscar" />
-                </form>
-                <div class="search-bar__carrito-container"><img src="img/logos/carrito.svg" alt="carrito congelados escobar"></div>
-                <div class="menu-toggle">
-                  <label for="menu" class="menu-toggle__label">
-                    <span class="menu-toggle__top-bread"></span>
-                    <span class="menu-toggle__meat"></span>
-                    <span class="menu-toggle__bottom-bread"></span>
-                  </label>
-                </div>
+<main>
+    <div class="titulo">
+        <h1>Contacto</h1>
+    </div>
+    <form class="form form__contacto">
+        <input placeholder="Nombre" type="text" class="input" required="">
+        <input placeholder="Apellido" type="text" class="input" required="">
+        <input placeholder="E-mail" type="email" class="input" required="">
+        <input placeholder="Celular" type="number" class="input" required="">
+        <button class="enviar">
+            <div class="svg-wrapper-1">
+              <div class="svg-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="none" d="M0 0h24v24H0z"></path>
+                  <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                </svg>
               </div>
-        </header>
-
-        <main>
-            <div class="titulo">
-                <h1>Contacto</h1>
             </div>
-            <form class="contacto">
-                <input placeholder="Nombre" type="text" class="input" required="">
-                <input placeholder="Apellido" type="text" class="input" required="">
-                <input placeholder="E-mail" type="email" class="input" required="">
-                <input placeholder="Celular" type="number" class="input" required="">
-                <button class="enviar">
-                    <div class="svg-wrapper-1">
-                      <div class="svg-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                          <path fill="none" d="M0 0h24v24H0z"></path>
-                          <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <span>Enviar</span>
-                </button>
+            <span>Enviar</span>
+        </button>
 
-                <div class="redes">
-                    <div class="instagram"><a href="#"><img src="img/logos/instagram.svg" alt="instagram"></a></div>
-                    <div class="whatsapp"><a href="#"><img src="img/logos/wpp.svg" alt="whatsapp"></a></div>
-                </div>
-            </form>
-        </main>
-
-    <script src='js/main.js'></script>
-    </body>
-    </html>
+        <div class="redes">
+            <div class="instagram"><a href="#"><img src="img/logos/instagram.svg" alt="instagram"></a></div>
+            <div class="whatsapp"><a href="#"><img src="img/logos/wpp.svg" alt="whatsapp"></a></div>
+        </div>
+    </form>
+</main>

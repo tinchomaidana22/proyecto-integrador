@@ -1,0 +1,40 @@
+#listado-productos{
+    
+    table{
+        background-color: $light-green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid $dark-green;
+        border-radius: 20px;
+        margin: 15px;
+        overflow: hidden;
+
+        tr{
+
+
+            &:first-of-type{
+                background-color: $dark-green;
+                color: $light-green;
+                font-weight: bold;
+
+                td{
+                border-radius: 10rem;
+
+                }
+            }
+
+            td{
+                text-align: center;
+                padding: 5px;
+
+                border-bottom: 1px solid black;
+                border-radius:0px;
+
+                button{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

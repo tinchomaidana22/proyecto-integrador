@@ -24,6 +24,17 @@
         {{else}}
             <td>No</td>
         {{/if}}
+        <td>
+            {{#if ../validos}}
+                <button onclick="actualizarProd({{id}})">Actualizar</button>
+            {{else}}
+                <button disabled onclick="actualizarProd({{id}})">Actualizar</button>
+            {{/if}}
+        </td>
+
+        <td>
+            <button onclick="borrarProd({{id}})">Borrar</button>
+        </td>
     </tr>
     {{/each}}
 </table>

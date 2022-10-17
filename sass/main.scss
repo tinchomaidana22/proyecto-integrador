@@ -1,7 +1,16 @@
 @import "base/reset";
 @import "base/typography";
+
 @import "pages/index";
-@import "layout/header";
-@import "components/card";
 @import "pages/contacto";
 @import "pages/nosotros";
+@import "pages/alta";
+
+@import "layout/header";
+
+@import "components/card";
+@import "components/carrito";
+@import "components/index";
+@import "components/forms";
+@import "components/tablas"
+

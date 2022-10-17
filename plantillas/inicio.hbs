@@ -1,0 +1,20 @@
+{{#if listado.length }}
+    {{#each listado}}
+        <a href="#" class="card" >
+            <article class="card__article">
+                <div class="card__image-container">
+                    <img class="card__image" src="{{foto}}" alt="{{nombre}}"/>
+                </div>
+                <div class="card__content">
+                    <h2 class="card__heading">{{nombre}}</h2>
+                    <div class="card__description">
+                        <p> Acelga en hojas congelada</p>
+                    </div>
+                </div>
+            <button class="agregar-carrito" onclick="agregarCarrito(event,{{id}}, this)">Agregar al carrito</button>
+            </article>
+        </a>
+    {{/each}}
+{{else}}
+    <h2>No se encontraron productos</h2>
+{{/if}}

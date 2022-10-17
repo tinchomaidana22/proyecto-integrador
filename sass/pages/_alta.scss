@@ -1,0 +1,46 @@
+.form__alta{
+
+    input[type="checkbox"]{
+        display: block;
+    }
+
+    button{
+        &:disabled{
+            display: none;
+
+        }
+    }
+
+}
+
+button{
+
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    overflow: hidden;
+    padding-left: 0.9em;
+    padding: 0.7em 1em;
+    margin: 5px;
+    transition: all .5s;
+
+    &:disabled{
+    background: $light-green;
+    
+    }
+
+    &:enabled{
+        background: $green;
+        color: $light-green;
+        display: block;
+
+    }
+
+    &:hover {
+        color: $green;
+        background-color: $light-green;
+    }
+}

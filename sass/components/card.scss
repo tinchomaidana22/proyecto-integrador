@@ -17,8 +17,15 @@
   padding: 1.9rem;
   position: relative;
   text-decoration: none;
-  transition: 0.4s ease-out;
+  transition: all 0.4s ease-out;
+
   
+
+  .carrito{
+    display: none;
+  }
+  
+
   &:hover,
   &:focus {
     -moz-transform-origin: bottom;
@@ -49,6 +56,8 @@
     transform: scale(1.01);
 
   }
+
+  
 
   &:hover &__image,
   &:focus &__image {
@@ -83,11 +92,22 @@
     transform: translateY(0);
    }
 
+   &:hover .carrito{
+    display: inline;
+   }
+
 
 
   @media (min-width:340px){
     &__description{
       opacity: 1;
+    }
+
+    &__article{
+      .agregar-carrito{
+        display: block;
+        font-size: 10px;
+      }
     }
   }
   @media (min-width:1024px){

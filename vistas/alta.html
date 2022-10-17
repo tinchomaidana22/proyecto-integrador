@@ -1,16 +1,63 @@
-<!DOCTYPE html>
-    <html lang='es'>
-    <head>
-        <meta charset='UTF-8'>
-        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<div class="titulo">
+    <h1>Alta</h1>
+</div>
+<form autocomplete="off" class="form form__alta">
+    <!-- Nombre -->
+    <input placeholder="Nombre" type="text" class="input" id="nombre" required="">
+    <div></div>
 
-        <link rel='stylesheet' href='css/main.css'>
-        <title>Alta</title>
-    </head>
-    <body>
+    <!-- Precio -->
+    <input placeholder="Precio" type="number" class="input" id="precio" required="">
+    <div></div>
 
-        <h1>Alta</h1>
+    <!-- Stock -->
+    <input placeholder="Stock" type="number" class="input" id="stock" required="">
+    <div></div>
 
-    <script src='js/main.js'></script>
-    </body>
-    </html>
+    <!-- Marca -->
+    <input placeholder="Marca" type="text" class="input" id="marca" required="">
+    <div></div>
+
+    <!-- Categoria -->
+    <input placeholder="Categoria" type="text" class="input" id="categoria" required="">
+    <div></div>
+
+    <!-- Detalles -->
+    <input placeholder="Detalles" type="text" class="input" id="detalles" required="">
+    <div></div>
+
+    <!-- Foto -->
+    <input placeholder="Foto" type="text" class="input" id="foto" required="">
+    <div></div>
+
+    <!-- Envio -->
+    <label for="envio">Envio</label>
+    <input placeholder="Envio" type="checkbox" class="input" id="envio" required="">
+    <div></div>
+
+    <button>Agregar</button>
+</form>
+
+<hr>
+<div class="titulo">
+    <h2>Listado de productos</h2>
+</div>
+<hr>
+
+<div id="listado-productos">
+    <table class="table">
+        <tr>
+            <td>Nombre</td>
+            <td>Precio</td>
+            <td>Stock</td>
+            <td>Marca</td>
+            <td>Categoria</td>
+            <td>Detalles</td>
+            <td>Fotos</td>
+            <td>Envios</td>
+        </tr>
+    </table>
+</div>
+    
+    
+        
