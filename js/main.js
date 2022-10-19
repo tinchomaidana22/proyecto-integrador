@@ -29,16 +29,7 @@ class Main {
         })
     }
 
-    initJS(id) { // usar switch mejor
-        /* if (id === 'alta') {
-            initAlta()
-        } else if (id === 'inicio'){
-            initInicio()
-        } else if (id==='nosotros'){
-            initNosotros()
-        } else if (id==='contacto'){
-            initContacto()
-        } */
+    initJS(id) { 
 
         switch (id) {
             case 'alta':
