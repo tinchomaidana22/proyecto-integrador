@@ -501,7 +501,8 @@ button:hover {
   border: 1px solid rgba(0, 0, 0, 0.534);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.534);
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
   flex-grow: 1;
   height: 150px;
   max-width: 300px;
@@ -510,7 +511,7 @@ button:hover {
   padding: 1.9rem;
   position: relative;
   text-decoration: none;
-  transition: all 0.4s ease-out;
+  transition: all 0.7s ease-out;
 }
 .card .carrito {
   display: none;
@@ -524,19 +525,25 @@ button:hover {
   transform: scale(1.03) skewX();
   box-shadow: 0 7px 8px rgba(0, 0, 0, 0.05), 0 3 3px rgba(0, 0, 0, 0.01);
 }
+.card:hover .agregar-carrito {
+  display: flex;
+  font-size: 20px;
+  width: 75%;
+  padding: 20px;
+}
 .card__image-container {
   border-radius: 100%;
   height: 100px;
   overflow: hidden;
   width: 100px;
-  border: 1px solid rgba(0, 0, 0, 0.534);
+  border: 2px solid rgba(0, 0, 0, 0.534);
 }
 .card__image {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: 0.2s;
+  transition: 0.5s;
   border: 1px solid rgba(0, 0, 0, 0.534);
   transform: scale(1.01);
 }
@@ -572,14 +579,25 @@ button:hover {
   .card__description {
     opacity: 1;
   }
-  .card__article .agregar-carrito {
-    display: block;
-    font-size: 10px;
+  .card {
+    margin-top: 20px;
+  }
+  .card .agregar-carrito {
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding: 20px;
+    width: 50%;
   }
 }
 @media (min-width: 1024px) {
   .card {
     min-width: 240px;
+  }
+  .card .agregar-carrito {
+    display: none;
   }
   .card__description {
     opacity: 0;

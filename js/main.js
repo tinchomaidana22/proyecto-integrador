@@ -30,7 +30,7 @@ class Main {
     }
 
     initJS(id) { // usar switch mejor
-        if (id === 'alta') {
+        /* if (id === 'alta') {
             initAlta()
         } else if (id === 'inicio'){
             initInicio()
@@ -38,7 +38,23 @@ class Main {
             initNosotros()
         } else if (id==='contacto'){
             initContacto()
+        } */
+
+        switch (id) {
+            case 'alta':
+                initAlta()
+                break;
+            case 'inicio': 
+                initInicio()
+                break;
+            case 'nosotros': 
+                initNosotros()
+                break;
+            case 'contacto': 
+                initContacto()
+                break;
         }
+
     }
 
     async cargarPlantilla(id) {
