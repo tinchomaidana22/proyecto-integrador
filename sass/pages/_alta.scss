@@ -1,46 +1,82 @@
 .form__alta{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows:repeat(2, 1fr) ;
+    margin: 10px;
 
-    input[type="checkbox"]{
+    &--checkbox--cont{
+        display: flex;
+        align-items: center;
+    }
+
+    &--div--input{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &--checkbox{
+        height: 1.7rem;
+        width: 1.7rem;
+        margin: 5px;
+        display: inline-block;
+        appearance: none;
+        position: relative;
+        background-color: rgb(121, 121, 121);
+        border-radius: 15%;
+        cursor: pointer;
+        overflow: hidden;
+       }
+       
+       &--checkbox::after {
+        content: '';
         display: block;
-    }
-
-    button{
-        &:disabled{
-            display: none;
-
-        }
-    }
-
-}
-
-button{
-
-    border-radius: 16px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    overflow: hidden;
-    padding-left: 0.9em;
-    padding: 0.7em 1em;
-    margin: 5px;
-    transition: all .5s;
-
-    &:disabled{
-    background: $light-green;
-    
-    }
-
-    &:enabled{
-        background: $green;
-        color: $light-green;
+        height: 0.9rem;
+        width: .4rem;
+        border-bottom: .31rem solid $light-green;
+        border-right: .31rem solid $light-green;
+        opacity: 0;
+        transform: rotate(45deg) translate(-50%, -50%);
+        position: absolute;
+        top: 45%;
+        left: 21%;
+        transition: .25s ease;
+       }
+       
+       &--checkbox::before {
+        content: '';
         display: block;
+        height: 0;
+        width: 0;
+        background-color: $dark-green;
+        border-radius: 50%;
+        opacity: .5;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: .3s ease;
+       }
+       
+       &--checkbox:checked::before {
+        height: 130%;
+        width: 130%;
+        opacity: 100%;
+       }
+       
+       &--checkbox:checked::after {
+        opacity: 100%;
+       }
+       
+       &--checkbox--span {
+        font-size: 2rem;
+       }
 
-    }
-
-    &:hover {
-        color: $green;
-        background-color: $light-green;
-    }
+       &--btn{
+        grid-column: 2/4;
+        width: 50%;
+        justify-self: center;
+       }
 }

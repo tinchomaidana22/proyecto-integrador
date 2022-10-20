@@ -75,7 +75,7 @@ class FormularioAlta{
 
     //muestra o oculta mensaje
     setCustomValidity = (mesage, index)=>{ 
-    let divs = document.querySelectorAll('form div')
+    let divs = document.querySelectorAll('form div div')
     divs[index].innerHTML=mesage
     divs[index].style.display = mesage ? 'block' : 'none'
     }

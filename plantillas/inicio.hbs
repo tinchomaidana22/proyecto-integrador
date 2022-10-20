@@ -9,10 +9,11 @@
                     <h2 class="card__heading">{{nombre}}</h2>
                     <div class="card__description">
                         <p> Acelga en hojas congelada</p>
+                        <p>${{precio}}</p>
                     </div>
                 </div>
             </article>
-            <button class="agregar-carrito" onclick="agregarCarrito(event,{{id}}, this)">Agregar al carrito</button>
+            <button class="btn agregar-carrito" onclick="agregarCarrito(event,{{id}}, this)">Agregar al carrito</button>
         </a>
     {{/each}}
 {{else}}

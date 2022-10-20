@@ -25,19 +25,20 @@ main {
 
 }
 
-.input {
-    line-height: 28px;
+.label, .input{
     border: 2px solid transparent;
     border-bottom-color: $green;
     padding: 20px;
     margin: 20px;
     outline: none;
-    background-color: transparent;
     color: $dark-green;
-    transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
     font-size: 1.5rem;
-    
-   
+}
+
+.input {
+    line-height: 28px;
+    background-color: transparent;
+    transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
    
    &:focus,&:hover {
     outline: none;

@@ -26,14 +26,14 @@
         {{/if}}
         <td>
             {{#if ../validos}}
-                <button onclick="productoController.actualizarProd({{id}})">Actualizar</button>
+                <button onclick="productoController.actualizarProd({{id}})" class="btn">Actualizar</button>
             {{else}}
-                <button disabled onclick="productoController.actualizarProd({{id}})">Actualizar</button>
+                <button disabled onclick="productoController.actualizarProd({{id}})" class="btn">Actualizar</button>
             {{/if}}
         </td>
 
         <td>
-            <button onclick="productoController.borrarProd({{id}})">Borrar</button>
+            <button onclick="productoController.borrarProd({{id}})" class="btn">Borrar</button>
         </td>
     </tr>
     {{/each}}
