@@ -1,0 +1,3 @@
+class ContactoModel{
+    contacto = []
+}
