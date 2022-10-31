@@ -40,7 +40,7 @@ body {
 .btn:enabled {
   background: #519872;
   color: #eeffed;
-  display: block;
+  display: flex;
 }
 .btn:hover {
   color: #519872;
