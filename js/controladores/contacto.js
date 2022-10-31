@@ -1,15 +1,18 @@
 class ContactoController extends ContactoModel{
+
     async enviarConsulta(consulta){
         try {
-            this.contacto.push(consulta)
-            const divForm = document.getElementsByClassName('.envio-consulta')[0]
-            divForm.innerHTML = `<h2>Enviando consulta...</h2>`
 
-            await contactoService.enviarConsulta(this.contacto)
+            const divFormConsulta = document.querySelector('#envio-consulta')
+            divFormConsulta.innerHTML='Enviando Consulta'
+            
+            const consultaEnviada = await contactoService.enviarConsulta(consulta)
 
-            divForm.innerHTML = `<h2>Enviando consulta <b>OK!</b></h2>`
+            divFormConsulta.innerHTML='Consulta Enviada con exito'
+            return consultaEnviada
+            
         } catch (error) {
-            console.error(error)
+            console.error(error);
         }
     }
 }
