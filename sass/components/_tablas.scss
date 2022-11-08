@@ -1,4 +1,4 @@
-table{
+.table{
     background-color: $light-green;
     display: flex;
     justify-content: center;
@@ -8,6 +8,22 @@ table{
     margin: 15px;
     overflow: hidden;
 
+    @media (min-width:350px){
+        td, th{
+            font-size: 7px;
+        }
+
+        td{
+            img{
+                width: 5px;
+            }
+
+            button {
+                font-size: 7px;
+            }
+        }
+    }
+
     tr{
 
 
@@ -16,7 +32,7 @@ table{
             color: $light-green;
             font-weight: bold;
 
-            td{
+            td, th{
             border-radius: 10rem;
 
             }
@@ -29,9 +45,14 @@ table{
             border-bottom: 1px solid black;
             border-radius:0px;
 
+            /* img{
+                width: 70px;
+                border-radius: 100%;
+            }
+
             button{
                 font-size: 15px;
-            }
+            } */
         }
     }
 }

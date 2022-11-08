@@ -1,6 +1,7 @@
+<button class="btn cerrar-carrito">Cerrar</button>
 {{#if carrito.length}}
-    <button class="btn__enviarCarrito" onclick="carritoController.enviarCarrito()">Enviar</button>
-    <table>
+    <button class="btn__enviarCarrito btn" onclick="carritoController.enviarCarrito()">Enviar</button>
+    <table class="table">
         <tr>
             <th>Nombre</th>
             <th>Precio</th>
@@ -15,14 +16,14 @@
                 <td>{{nombre}}</td>
                 <td>{{precio}}</td>
                 <td>{{marca}}</td>
-                <td><img style="display: block; margin:0 auto;" width="50" src="{{imagen}}" alt="{{nombre}}"></td>
+                <td><img style="display: block; margin:0 auto;" width="50" src="{{foto}}" alt="{{nombre}}"></td>
                 <td>{{cantidad}}</td>
                 {{#if envio}}
                     <td>Si</td>
                 {{else}}
                     <td>No</td>
                 {{/if}}
-                <td><button onclick="carritoController.borrarDelCarrito({{id}})">Borrar</button></td>
+                <td><button class="btn" onclick="carritoController.borrarDelCarrito({{id}})">Borrar</button></td>
             </tr>
         {{/each}}
     </table>

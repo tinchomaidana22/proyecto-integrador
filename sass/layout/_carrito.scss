@@ -1,0 +1,30 @@
+.section-carrito--visible{
+
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+
+    
+    .btn__enviarCarrito{
+        order: 2;
+        width: 15%;
+        align-self: center;
+    }
+    
+    .cerrar-carrito{
+        width: 15%;
+        align-self: flex-end;
+    }
+    
+    @media (min-width:340px) and (max-width:550px){
+        .btn__enviarCarrito, .cerrar-carrito{
+            width: 40%;
+        }
+    }
+
+    
+    
+
+}
+
