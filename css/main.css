@@ -276,7 +276,7 @@ main {
 }
 @media (min-width: 350px) {
   .table td, .table th {
-    font-size: 7px;
+    font-size: 10px;
   }
   .table td img {
     width: 5px;
