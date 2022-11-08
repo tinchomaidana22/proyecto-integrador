@@ -26,7 +26,7 @@ class FormularioContacto{
             const consulta = this.leerConsulta()
             this.cleanForm()
 
-            if(enviarConsulta) enviarConsulta(consulta) //TODO: revisar el envio
+            if(enviarConsulta) enviarConsulta(consulta)
         })
 
         
@@ -90,5 +90,4 @@ function initContacto() {
     console.warn('initContacto()');
 
     fContacto = new FormularioContacto(contactoController.enviarConsulta)
-    //renderForm()
 }

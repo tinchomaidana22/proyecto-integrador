@@ -1,4 +1,4 @@
-class ContactoController extends ContactoModel{
+class ContactoController{
 
     async enviarConsulta(consulta){
         try {
