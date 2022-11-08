@@ -67,25 +67,6 @@ body {
 .card .carrito {
   display: none;
 }
-.card:hover, .card:focus {
-  -moz-transform-origin: bottom;
-  -moz-transform: scale(1.03);
-  -webkit-transform-origin: bottom;
-  -webkit-transform: scale(1.03);
-  transform-origin: bottom;
-  transform: scale(1.03) skewX();
-  box-shadow: 0 7px 8px rgba(0, 0, 0, 0.05), 0 3 3px rgba(0, 0, 0, 0.01);
-}
-.card:hover {
-  padding: 55px;
-  justify-content: center;
-}
-.card:hover .agregar-carrito {
-  display: flex;
-  font-size: 19px;
-  width: 80%;
-  padding: 25px;
-}
 .card__image-container {
   border-radius: 100%;
   height: 100px;
@@ -102,10 +83,6 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.534);
   transform: scale(1.01);
 }
-.card:hover .card__image, .card:focus .card__image {
-  transform: scale(1.4) rotate(5deg);
-  transform-origin: center;
-}
 .card__description {
   color: black;
   opacity: 0;
@@ -116,19 +93,6 @@ body {
 }
 .card__heading {
   color: #519872;
-}
-.card:hover {
-  transform: translateY(5%);
-}
-.card:hover:before {
-  opacity: 1;
-}
-.card:hover .card__description {
-  opacity: 1;
-  transform: translateY(0);
-}
-.card:hover .carrito {
-  display: inline;
 }
 @media (min-width: 340px) {
   .card__description {
@@ -150,6 +114,42 @@ body {
 @media (min-width: 1024px) {
   .card {
     min-width: 240px;
+  }
+  .card:hover, .card:focus {
+    -moz-transform-origin: bottom;
+    -moz-transform: scale(1.03);
+    -webkit-transform-origin: bottom;
+    -webkit-transform: scale(1.03);
+    transform-origin: bottom;
+    transform: scale(1.03) skewX();
+    box-shadow: 0 7px 8px rgba(0, 0, 0, 0.05), 0 3 3px rgba(0, 0, 0, 0.01);
+  }
+  .card:hover {
+    padding: 55px;
+    justify-content: center;
+  }
+  .card:hover .agregar-carrito {
+    display: flex;
+    font-size: 19px;
+    width: 80%;
+    padding: 25px;
+  }
+  .card:hover .card__image, .card:focus .card__image {
+    transform: scale(1.4) rotate(5deg);
+    transform-origin: center;
+  }
+  .card:hover {
+    transform: translateY(5%);
+  }
+  .card:hover:before {
+    opacity: 1;
+  }
+  .card:hover .card__description {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .card:hover .carrito {
+    display: inline;
   }
   .card .agregar-carrito {
     display: none;

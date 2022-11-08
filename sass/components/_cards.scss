@@ -26,27 +26,7 @@
   }
   
 
-  &:hover,
-  &:focus {
-    -moz-transform-origin: bottom;
-    -moz-transform: scale(1.03);
-    -webkit-transform-origin: bottom;
-    -webkit-transform: scale(1.03);
-    transform-origin: bottom;
-    transform: scale(1.03) skewX();
-    box-shadow: 0 7px 8px rgba(0, 0, 0, 0.05), 0 3 3px rgba(0, 0, 0, 0.01);
-  }
-
-  &:hover{
-    padding: 55px;
-    justify-content: center;
-    .agregar-carrito{
-      display: flex;
-      font-size: 19px;
-      width: 80%;
-      padding: 25px;
-    }
-  }
+  
 
 
   &__image-container {
@@ -70,11 +50,7 @@
 
   
 
-  &:hover &__image,
-  &:focus &__image {
-    transform: scale(1.4) rotate(5deg);
-    transform-origin: center;
-  }
+  
 
   &__description {
     color: black;
@@ -90,22 +66,7 @@
   }
 
 
-  &:hover {
-    transform: translateY(5%);
-   }
-   
-   &:hover:before {
-    opacity: 1;
-   }
-   
-   &:hover &__description {
-    opacity: 1;
-    transform: translateY(0);
-   }
-
-   &:hover .carrito{
-    display: inline;
-   }
+  
 
 
 
@@ -133,6 +94,48 @@
   @media (min-width:1024px){
     &{
         min-width: 240px;
+        &:hover,
+        &:focus {
+          -moz-transform-origin: bottom;
+          -moz-transform: scale(1.03);
+          -webkit-transform-origin: bottom;
+          -webkit-transform: scale(1.03);
+          transform-origin: bottom;
+          transform: scale(1.03) skewX();
+          box-shadow: 0 7px 8px rgba(0, 0, 0, 0.05), 0 3 3px rgba(0, 0, 0, 0.01);
+        }
+
+        &:hover{
+          padding: 55px;
+          justify-content: center;
+          .agregar-carrito{
+            display: flex;
+            font-size: 19px;
+            width: 80%;
+            padding: 25px;
+          }
+        }
+        &:hover &__image,
+        &:focus &__image {
+          transform: scale(1.4) rotate(5deg);
+          transform-origin: center;
+        }
+        &:hover {
+          transform: translateY(5%);
+         }
+         
+        &:hover:before {
+          opacity: 1;
+        }
+         
+        &:hover &__description {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      
+        &:hover .carrito{
+          display: inline;
+        }
     }
     &{
       .agregar-carrito{
