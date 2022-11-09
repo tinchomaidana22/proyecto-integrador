@@ -286,7 +286,7 @@ main {
     width: 20px;
   }
   .table td button {
-    font-size: 7px;
+    font-size: 10px;
   }
 }
 .table tr:first-of-type {
