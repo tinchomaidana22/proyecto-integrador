@@ -558,7 +558,7 @@ body {
   }
   .table-alta td {
     font-size: 7px;
-    padding: 2px;
+    padding: 2px !important;
     margin: 2px;
   }
   .table-alta button {
