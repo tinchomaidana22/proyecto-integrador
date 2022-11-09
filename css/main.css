@@ -554,7 +554,7 @@ body {
 
 @media (min-width: 340px) {
   .table-alta {
-    margin: 0;
+    margin: 5px;
   }
   .table-alta td {
     font-size: 7px;
