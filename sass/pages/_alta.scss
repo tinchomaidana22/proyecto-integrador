@@ -80,3 +80,13 @@
         justify-self: center;
        }
 }
+
+.table-alta{
+
+
+    @media (min-width:1024px){
+        &{
+            width: auto;
+        }
+    }
+}
