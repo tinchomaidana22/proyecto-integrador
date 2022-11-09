@@ -472,6 +472,16 @@ body {
   grid-template-rows: repeat(2, 1fr);
   margin: 10px;
 }
+@media (min-width: 340px) {
+  .form__alta {
+    display: flex;
+  }
+}
+@media (min-width: 1024px) {
+  .form__alta {
+    display: grid;
+  }
+}
 .form__alta--checkbox--cont {
   display: flex;
   align-items: center;
@@ -542,6 +552,24 @@ body {
   justify-self: center;
 }
 
+@media (min-width: 340px) {
+  .table-alta {
+    margin: 0;
+  }
+  .table-alta td {
+    font-size: 7px;
+    padding: 2px;
+    margin: 2px;
+  }
+  .table-alta button {
+    font-size: 5px;
+    padding: 2px;
+    margin: 2px;
+  }
+  .table-alta img {
+    width: 5px;
+  }
+}
 @media (min-width: 1024px) {
   .table-alta {
     width: auto;
