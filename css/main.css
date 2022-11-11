@@ -570,6 +570,21 @@ body {
     width: 5px;
   }
 }
+@media (min-width: 768px) {
+  .table-alta td {
+    font-size: 16px;
+    padding: 5px !important;
+    margin: 5px;
+  }
+  .table-alta button {
+    font-size: 14px;
+    padding: 5px;
+    margin: 5px;
+  }
+  .table-alta img {
+    width: 15px;
+  }
+}
 @media (min-width: 1024px) {
   .table-alta {
     width: auto;
