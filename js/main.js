@@ -16,7 +16,7 @@ class Main {
 
     // helper obtener nombre archivo
     getFileName(id) {
-        return `vistas/${id}.html`
+        return `views/${id}.html`
     }
 
     marcarLink(id) {

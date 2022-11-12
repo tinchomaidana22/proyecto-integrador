@@ -3,12 +3,13 @@ class ContactoController{
     async enviarConsulta(consulta){
         try {
 
-            const divFormConsulta = document.querySelector('#envio-consulta')
-            divFormConsulta.innerHTML='Enviando Consulta'
+            const btnEnvioConsulta = document.querySelector('#enviar-contacto')
+            btnEnvioConsulta.textContent='Enviando Consulta...'
             
             const consultaEnviada = await contactoService.enviarConsulta(consulta)
 
-            divFormConsulta.innerHTML='Consulta Enviada con exito'
+            btnEnvioConsulta.textContent='Consulta enviada con exito!'
+            setTimeout(()=>{location.reload()},1700)
             return consultaEnviada
             
         } catch (error) {

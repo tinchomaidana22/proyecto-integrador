@@ -1,7 +1,7 @@
 async function renderPlantillaListado(listado){
 
     try {
-        const respuesta = await fetch('plantillas/inicio.hbs')
+        const respuesta = await fetch('templates/inicio.hbs')
         const plantillaHbs = await respuesta.text()
         const template = Handlebars.compile(plantillaHbs)
 

@@ -11,9 +11,15 @@
 #menu {
   display: none;
 
+ 
+
+
   &:checked + .nav-bar {
-    display: flex;
+    height: 5vh;
+    opacity: 1;
   }
+
+  
 
 }
 
@@ -28,6 +34,7 @@
   height: 5vh;
   justify-content: center;
   order: 2;
+ 
   
   &__nav-list {
     display: flex;
@@ -55,11 +62,11 @@
     margin: 10px;
 
     &:hover{
+      transition: all .5s;
       border-radius: 15px;
       color: $white;
       background-color: $green;
       padding: 5px;
-      transition: all .5s;
     }
 
   }
@@ -89,9 +96,35 @@
     & {
       flex-wrap: wrap;
       order: 2;
-      display: none;
+      display: flex;
+      height: 0;
+      opacity: 0;
       flex-direction: row;
+      transition: all .5s ease-in-out;
+      
     }
+  }
+}
+
+@keyframes nav-in {
+  from{
+    height: 0;
+    opacity: 0;
+  }
+  to{
+    height: 50px;
+    opacity:1;
+  }
+}
+
+@keyframes nav-out {
+  from{
+    height: 50px;
+    opacity:1;
+  }
+  to{
+    height: 0;
+    opacity: 0;
   }
 }
 

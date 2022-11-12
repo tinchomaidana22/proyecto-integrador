@@ -4,7 +4,7 @@ async function renderTablaCarrito(carrito) {
 
     try {
         const elemSectionCarrito = document.getElementsByClassName('section-carrito')[0]
-        const respuesta = await fetch('plantillas/carrito.hbs')
+        const respuesta = await fetch('templates/carrito.hbs')
         const plantillaHbs = await respuesta.text()
         const template = Handlebars.compile(plantillaHbs)
         const html = template({carrito})
@@ -35,6 +35,7 @@ function initCarrito() {
         } catch(error){
             console.error(error);
         }
+        mostrarCarrito = !mostrarCarrito
         
 })  
 }

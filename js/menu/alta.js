@@ -109,7 +109,7 @@ class FormularioAlta{
 const renderTablaAlta=(validos, productos)=>{ 
     const xhr = new XMLHttpRequest()
 
-    xhr.open('get', 'plantillas/alta.hbs')
+    xhr.open('get', 'templates/alta.hbs')
     xhr.addEventListener('load', ()=>{
         if (xhr.status===200) {
             let plantillaHbs=xhr.response

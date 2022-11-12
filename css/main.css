@@ -602,7 +602,8 @@ body {
   display: none;
 }
 #menu:checked + .nav-bar {
-  display: flex;
+  height: 5vh;
+  opacity: 1;
 }
 
 /*****NAVBAR***/
@@ -640,11 +641,11 @@ body {
   margin: 10px;
 }
 .nav-bar__nav-link:hover {
+  transition: all 0.5s;
   border-radius: 15px;
   color: #fcfcfc;
   background-color: #519872;
   padding: 5px;
-  transition: all 0.5s;
 }
 @media (min-width: 340px) and (max-width: 768px) {
   .nav-bar__nav-link {
@@ -669,11 +670,55 @@ body {
   .nav-bar {
     flex-wrap: wrap;
     order: 2;
-    display: none;
+    display: flex;
+    height: 0;
+    opacity: 0;
     flex-direction: row;
+    transition: all 0.5s ease-in-out;
   }
 }
 
+@-webkit-keyframes nav-in {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: 50px;
+    opacity: 1;
+  }
+}
+
+@keyframes nav-in {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: 50px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes nav-out {
+  from {
+    height: 50px;
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+@keyframes nav-out {
+  from {
+    height: 50px;
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
 /***SEARCH BAR***/
 .search-bar {
   height: 10vh;
