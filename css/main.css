@@ -678,47 +678,6 @@ body {
   }
 }
 
-@-webkit-keyframes nav-in {
-  from {
-    height: 0;
-    opacity: 0;
-  }
-  to {
-    height: 50px;
-    opacity: 1;
-  }
-}
-
-@keyframes nav-in {
-  from {
-    height: 0;
-    opacity: 0;
-  }
-  to {
-    height: 50px;
-    opacity: 1;
-  }
-}
-@-webkit-keyframes nav-out {
-  from {
-    height: 50px;
-    opacity: 1;
-  }
-  to {
-    height: 0;
-    opacity: 0;
-  }
-}
-@keyframes nav-out {
-  from {
-    height: 50px;
-    opacity: 1;
-  }
-  to {
-    height: 0;
-    opacity: 0;
-  }
-}
 /***SEARCH BAR***/
 .search-bar {
   height: 10vh;
@@ -941,6 +900,10 @@ body {
   flex-direction: column;
   border-radius: 10px;
   align-self: center;
+  background-color: #eeffed;
+}
+.section-carrito--visible h2 {
+  color: #284d39;
 }
 .section-carrito--visible .btn__enviarCarrito {
   order: 2;

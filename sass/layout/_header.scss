@@ -101,30 +101,7 @@
       opacity: 0;
       flex-direction: row;
       transition: all .5s ease-in-out;
-      
     }
-  }
-}
-
-@keyframes nav-in {
-  from{
-    height: 0;
-    opacity: 0;
-  }
-  to{
-    height: 50px;
-    opacity:1;
-  }
-}
-
-@keyframes nav-out {
-  from{
-    height: 50px;
-    opacity:1;
-  }
-  to{
-    height: 0;
-    opacity: 0;
   }
 }
 

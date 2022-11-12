@@ -5,6 +5,11 @@
     flex-direction: column;
     border-radius: 10px;
     align-self: center;
+    background-color: $light-green;
+
+    h2{
+        color: $dark-green;
+    }
 
     
     .btn__enviarCarrito{

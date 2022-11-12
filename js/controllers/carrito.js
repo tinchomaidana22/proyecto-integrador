@@ -70,6 +70,11 @@ class CarritoController extends CarritoModel {
         const carrito = document.getElementsByClassName('section-carrito--visible')[0]
         if (carrito.className.includes('--visible')) carrito.classList.remove('section-carrito--visible')
     }
+
+    enviarInicio(){
+        location.hash = '#inicio'
+        this.cerrarCarrito()
+    }
 }
 
 const carritoController = new CarritoController()
