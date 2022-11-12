@@ -191,6 +191,11 @@ body {
   font-weight: bold;
 }
 
+.envio {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 main {
   display: flex;
   justify-content: center;
@@ -900,6 +905,7 @@ body {
   flex-direction: column;
   border-radius: 10px;
   align-self: center;
+  justify-content: center;
   background-color: #eeffed;
 }
 .section-carrito--visible h2 {
@@ -914,16 +920,34 @@ body {
   width: 15%;
   align-self: flex-end;
 }
+.section-carrito--visible .table .cantidades .cantidad {
+  margin: auto;
+  width: 100%;
+}
 @media (min-width: 340px) and (max-width: 550px) {
+  .section-carrito--visible .cantidad {
+    width: 10px;
+  }
   .section-carrito--visible .btn__enviarCarrito, .section-carrito--visible .cerrar-carrito {
     width: 40%;
   }
 }
 @media (min-width: 1024px) {
   .section-carrito--visible {
-    width: 60vw;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 90vw;
+    margin: auto;
+  }
+  .section-carrito--visible .cantidad {
+    padding: 5px;
+    align-self: flex-start;
+  }
+  .section-carrito--visible .table {
+    overflow: visible;
+  }
+  .section-carrito--visible th {
+    padding: 2px;
+  }
+  .section-carrito--visible td {
+    font-size: 15px;
   }
 }/*# sourceMappingURL=main.css.map */

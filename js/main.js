@@ -1,5 +1,3 @@
-//var elemSectionCarrito = document.getElementsByClassName('section-carrito')[0] // TODO: revisar
-
 class Main {
     // helper ajax
     async ajax(url,metodo='get') {
@@ -44,6 +42,7 @@ class Main {
             case 'contacto': 
                 initContacto()
                 break;
+                
         }
 
     }
@@ -90,7 +89,10 @@ class Main {
 
     async start() {
         await this.cargarPlantillas()
+        
+        
     }
+
 }
 
 const main = new Main()

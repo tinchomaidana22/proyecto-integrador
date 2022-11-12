@@ -38,6 +38,32 @@ class CarritoController extends CarritoModel {
         localStorage.setItem('carrito', JSON.stringify(this.carrito))
     }
 
+    async descontarDelCarrito(id){
+        try {
+            const index = this.carrito.findIndex(prod=>prod.id==id)
+            this.carrito[index].cantidad--
+            localStorage.setItem('carrito', JSON.stringify(this.carrito))
+            await renderTablaCarrito(this.carrito)
+
+            if (this.carrito[index].cantidad === 0) {
+                this.borrarDelCarrito(id)
+            }
+        } catch (error) {
+            console.log('Erro restar cantidad', error);
+        }
+    }
+
+    async sumarDelCarrito(id){
+        try {
+            const index = this.carrito.findIndex(prod=>prod.id==id)
+            this.carrito[index].cantidad++
+            localStorage.setItem('carrito', JSON.stringify(this.carrito))
+            await renderTablaCarrito(this.carrito)
+        } catch (error) {
+            console.log('Erro sumar cantidad', error);
+        }
+    }
+
     async borrarDelCarrito(id){
         try {
             const index = this.carrito.findIndex(prod=>prod.id==id)
@@ -71,10 +97,7 @@ class CarritoController extends CarritoModel {
         if (carrito.className.includes('--visible')) carrito.classList.remove('section-carrito--visible')
     }
 
-    enviarInicio(){
-        location.hash = '#inicio'
-        this.cerrarCarrito()
-    }
+    
 }
 
 const carritoController = new CarritoController()

@@ -27,7 +27,10 @@
                 <td>{{precio}}</td>
                 <td>{{marca}}</td>
                 <td><img style="display: block; margin:0 auto;" width="50" src="{{foto}}" alt="{{nombre}}"></td>
-                <td>{{cantidad}}</td>
+                <td class="cantidades">
+                    <button class="btn cantidad" onclick="carritoController.descontarDelCarrito({{id}})">-</button>
+                    {{cantidad}}
+                    <button class="btn cantidad" onclick="carritoController.sumarDelCarrito({{id}})">+</button></td>
                 {{#if envio}}
                     <td>Si</td>
                 {{else}}
@@ -39,5 +42,5 @@
     </table>
 {{else}}
     <h2>El carrito esta vacio <span>&#128549;</span></h2>
-    <button onclick="carritoController.enviarInicio()" class="btn">Ir a comprar</button>
+    <button onclick="redirecciones.enviarAInicio()" class="btn">Ir a comprar</button>
 {{/if}}
