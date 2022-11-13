@@ -196,6 +196,10 @@ body {
   text-decoration: underline;
 }
 
+#carrito {
+  display: none;
+}
+
 main {
   display: flex;
   justify-content: center;

@@ -42,15 +42,18 @@ class Main {
             case 'contacto': 
                 initContacto()
                 break;
-                
+            case 'carrito': 
+                initCarrito()    
         }
 
     }
 
     async cargarPlantilla(id) {
         let archivo = this.getFileName(id)
+        console.log(archivo);
 
         let plantilla = await this.ajax(archivo)
+        console.log(plantilla);
         
         //carga del codigo de la plantilla
         let main = document.querySelector('main')
@@ -89,8 +92,6 @@ class Main {
 
     async start() {
         await this.cargarPlantillas()
-        
-        
     }
 
 }
