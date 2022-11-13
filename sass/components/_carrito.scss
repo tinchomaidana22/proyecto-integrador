@@ -1,24 +1,13 @@
 .section-carrito{
-    @media (min-width:340px) {
-        &{
-            /* width: 100vw; */
-            top: 150px;
-            bottom: 150px;
-            right: 10px;
-            left: 10px;
-            
-        }
-    }
 
     display: none;
-    position:fixed;
     background-color: #f1f2f3;
-    z-index: 4;
+    z-index: 5;
     box-shadow: .3em .3em 10em .3em rgba(0,0,0,1);
 
     &--visible{
         display: flex;
-        
     }
 
 }
+

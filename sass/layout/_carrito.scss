@@ -1,6 +1,5 @@
 .section-carrito--visible{
 
-
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
@@ -12,11 +11,14 @@
         color: $dark-green;
     }
 
-    
+    button {
+        max-width: 150px;
+    }
     .btn__enviarCarrito{
         order: 2;
         width: 15%;
         align-self: center;
+        
     }
     
     .cerrar-carrito{
@@ -36,7 +38,6 @@
     
     
     @media (min-width:340px) and (max-width:550px){
-
 
         .cantidad {
             width: 10px;
