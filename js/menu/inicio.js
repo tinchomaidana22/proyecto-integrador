@@ -24,6 +24,10 @@ function agregarCarrito(e,id,ref){
 async function initInicio(){
     console.warn('InitInicio');
 
+    carritoController.notificador.classList.add('search-bar__carrito-container--notificador')
+    carritoController.containerCarrito.appendChild(carritoController.notificador)
+    carritoController.notificador.innerHTML = carritoController.getCantidadProductos()
+
     const productos = await productoController.obtenerProductos()
 
     await renderPlantillaListado(productos)

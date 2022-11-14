@@ -1,7 +1,9 @@
 class Redirecciones {
 
     enviarAInicio(){
-        location.hash = '#inicio'
+        if(location.hash != '#inicio') location.hash = '#inicio'
+        else carritoController.cerrarCarrito()
+        
         carritoController.cerrarCarrito()
     }
 

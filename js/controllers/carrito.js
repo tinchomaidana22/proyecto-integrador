@@ -1,5 +1,9 @@
 class CarritoController extends CarritoModel {
 
+    containerCarrito = document.querySelector('.search-bar__carrito-container')
+    notificador = document.createElement('div')
+    
+
     constructor(){
         super()
         try {
@@ -30,9 +34,11 @@ class CarritoController extends CarritoModel {
         if(!this.productoEnCarrito(producto)){
             producto.cantidad=1
             this.carrito.push(producto)
+            this.notificador.innerHTML = carritoController.getCantidadProductos()
         } else{
             const productoCarrito = this.obtenerProductoCarrito(producto)
             productoCarrito.cantidad++
+            this.notificador.innerHTML = carritoController.getCantidadProductos()
         }
 
         localStorage.setItem('carrito', JSON.stringify(this.carrito))
@@ -44,12 +50,14 @@ class CarritoController extends CarritoModel {
             this.carrito[index].cantidad--
             localStorage.setItem('carrito', JSON.stringify(this.carrito))
             await renderTablaCarrito(this.carrito)
+            this.notificador.innerHTML = carritoController.getCantidadProductos()
 
             if (this.carrito[index].cantidad === 0) {
                 this.borrarDelCarrito(id)
+                this.notificador.innerHTML = carritoController.getCantidadProductos()
             }
         } catch (error) {
-            console.log('Erro restar cantidad', error);
+            console.log('Error restar cantidad', error);
         }
     }
 
@@ -59,6 +67,7 @@ class CarritoController extends CarritoModel {
             this.carrito[index].cantidad++
             localStorage.setItem('carrito', JSON.stringify(this.carrito))
             await renderTablaCarrito(this.carrito)
+            this.notificador.innerHTML = carritoController.getCantidadProductos()
         } catch (error) {
             console.log('Erro sumar cantidad', error);
         }
@@ -70,6 +79,8 @@ class CarritoController extends CarritoModel {
             this.carrito.splice(index,1)
             localStorage.setItem('carrito', JSON.stringify(this.carrito))
             await renderTablaCarrito(this.carrito)
+            this.notificador.innerHTML = carritoController.getCantidadProductos()
+            
         } catch (error) {
             console.log(error);  
         }
@@ -96,6 +107,22 @@ class CarritoController extends CarritoModel {
         const carrito = document.getElementsByClassName('section-carrito--visible')[0]
         if (carrito.className.includes('--visible')) carrito.classList.remove('section-carrito--visible')
     }
+
+    getCantidadProductos(){
+        const cantidades = this.carrito.map(prod=>{
+            return prod.cantidad
+        })
+
+        const valorInicial = 0
+        const totalProductos = cantidades.reduce(
+            (prev, act) => prev + act,
+            0
+        );
+        
+        return totalProductos
+    }
+
+    
 
     
 }
