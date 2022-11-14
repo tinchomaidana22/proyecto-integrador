@@ -27,9 +27,8 @@
 
 .nav-bar {
   align-items: center;
-  background: rgb(238,238,238);
-  background: linear-gradient(180deg, rgba(238,238,238,1) 42%, rgba(238,255,237,1) 75%);
-  border-bottom: $light-green;
+  background-color: $green;
+  opacity: .8;
   display: flex;
   height: 5vh;
   justify-content: center;
@@ -66,7 +65,8 @@
       transition: all .5s;
       border-radius: 15px;
       color: $white;
-      background-color: $green;
+      background-color: $dark-green;
+      color:$light-green ;
       padding: 5px;
     }
 

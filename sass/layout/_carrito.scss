@@ -48,6 +48,12 @@
         }
     }
 
+    @media (min-width: 550px) and (max-width: 1024px){
+        &{
+            width: 70vw;
+        }
+    }
+
     @media (min-width:1024px){
         &{
             width: 90vw;
