@@ -267,7 +267,6 @@ main {
   border: 2px solid #284d39;
   border-radius: 20px;
   margin: 15px;
-  overflow: scroll;
 }
 @media (min-width: 350px) {
   .table {
@@ -925,11 +924,11 @@ body {
   color: #284d39;
 }
 .section-carrito--visible button {
-  max-width: 150px;
+  max-width: 100px;
 }
 .section-carrito--visible .btn__enviarCarrito {
   order: 2;
-  width: 15%;
+  /* width: 15%; */
   align-self: center;
 }
 .section-carrito--visible .cerrar-carrito {
@@ -943,9 +942,6 @@ body {
 @media (min-width: 340px) and (max-width: 550px) {
   .section-carrito--visible .cantidad {
     width: 10px;
-  }
-  .section-carrito--visible .btn__enviarCarrito, .section-carrito--visible .cerrar-carrito {
-    width: 40%;
   }
 }
 @media (min-width: 550px) and (max-width: 1024px) {

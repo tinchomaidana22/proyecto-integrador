@@ -12,11 +12,11 @@
     }
 
     button {
-        max-width: 150px;
+        max-width: 100px;
     }
     .btn__enviarCarrito{
         order: 2;
-        width: 15%;
+        /* width: 15%; */
         align-self: center;
         
     }
@@ -43,15 +43,13 @@
             width: 10px;
         }
         
-        .btn__enviarCarrito, .cerrar-carrito{
-            width: 40%;
-        }
     }
 
     @media (min-width: 550px) and (max-width: 1024px){
         &{
             width: 70vw;
         }
+        
     }
 
     @media (min-width:1024px){
@@ -74,10 +72,7 @@
         }
     }
 
-    
-
-    
-    
-
 }
+
+
 

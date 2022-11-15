@@ -24,7 +24,7 @@
         {{#each carrito}}
             <tr>
                 <td>{{nombre}}</td>
-                <td>{{precio}}</td>
+                <td>${{precioTotal}}</td>
                 <td>{{marca}}</td>
                 <td><img style="display: block; margin:0 auto;" width="50" src="{{foto}}" alt="{{nombre}}"></td>
                 <td class="cantidades">
@@ -40,6 +40,10 @@
             </tr>
         {{/each}}
     </table>
+    <div class="total">
+        <h2 class="totales"></h2>
+        <h2 class="totales"></h2>
+    </div>
 {{else}}
     <h2>El carrito esta vacio <span>&#128549;</span></h2>
     <button onclick="redirecciones.enviarAInicio()" class="btn">Ir a comprar</button>
