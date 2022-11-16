@@ -11,6 +11,23 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #519872;
+  border-radius: 4px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #284d39;
+}
+body::-webkit-scrollbar-track {
+  background: #e4e4e4;
+}
+body::-webkit-scrollbar-track:hover, body::-webkit-scrollbar-track:active {
+  background: #d3d3d3;
 }
 
 body {
@@ -268,7 +285,7 @@ main {
   border-radius: 20px;
   margin: 15px;
 }
-@media (min-width: 350px) {
+@media (min-width: 340px) {
   .table {
     margin: 2px;
   }
@@ -750,9 +767,6 @@ body {
   justify-content: center;
   height: 25px;
   width: 25px;
-  position: absolute;
-  top: 55%;
-  left: 15%;
 }
 @media (min-width: 340px) {
   .search-bar {
@@ -791,6 +805,11 @@ body {
   .search-bar__carrito-container {
     grid-column: 1;
     grid-row: 2/3;
+  }
+  .search-bar__carrito-container--notificador {
+    position: absolute;
+    top: 55%;
+    left: 50%;
   }
   .search-bar__carrito-container img {
     width: 30px;

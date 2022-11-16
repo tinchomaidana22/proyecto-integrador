@@ -32,5 +32,10 @@ async function initInicio(){
 
     await renderPlantillaListado(productos)
 
+    const cards = document.querySelectorAll('.card')
+    cards.forEach(card=>{
+        card.removeAttribute('href')
+    })
+
     document.querySelector('.section-cards__header p').innerHTML= `Se encontraron ${productos.length} productos`
 }

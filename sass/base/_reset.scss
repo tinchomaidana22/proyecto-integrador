@@ -1,3 +1,4 @@
+@import '../base/variables';
 *,
 *::before,
 *::after {
@@ -10,4 +11,24 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    &::-webkit-scrollbar{
+        width: 8px; 
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $green;
+        border-radius: 4px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: $dark-green;
+    }
+    &::-webkit-scrollbar-track {
+        background: #e4e4e4;
+    }
+    &::-webkit-scrollbar-track:hover,
+    &::-webkit-scrollbar-track:active {
+        background: #d3d3d3;
+    }
+
+    overflow-x: hidden;
 }
