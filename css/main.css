@@ -59,9 +59,11 @@ body {
   color: #eeffed;
   display: flex;
 }
-.btn:hover {
-  color: #519872;
-  background-color: #eeffed;
+@media (min-width: 1024px) {
+  .btn:hover {
+    color: #519872;
+    background-color: #eeffed;
+  }
 }
 
 .card {

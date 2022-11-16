@@ -25,6 +25,12 @@ class CarritoController extends CarritoModel {
 
     }
 
+    setValores(){
+        this.notificador.innerHTML = this.getCantidadProductos()
+        this.totales[0].innerHTML = `Total productos: ${this.getCantidadProductos()}`
+        this.totales[1].innerHTML = `Precio total: $${this.getValorCarrito()}`
+    }
+
     totalesEnCarrito(){
         setTimeout(()=>{
             this.totales[0].innerHTML = `Cargando...`
@@ -70,17 +76,13 @@ class CarritoController extends CarritoModel {
             localStorage.setItem('carrito', JSON.stringify(this.carrito))
             await renderTablaCarrito(this.carrito)
             
-            this.notificador.innerHTML = this.getCantidadProductos()
-            this.totales[0].innerHTML = `Total productos: ${this.getCantidadProductos()}`
-            this.totales[1].innerHTML = `Precio total: $${this.getValorCarrito()}`
+            this.setValores()
 
             if (this.carrito[index].cantidad === 0) {
 
                 this.borrarDelCarrito(id)
 
-                this.notificador.innerHTML = this.getCantidadProductos()
-                this.totales[0].innerHTML = `Total productos: ${this.getCantidadProductos()}`
-                this.totales[1].innerHTML = `Precio total: $${this.getValorCarrito()}`
+                this.setValores()
             }
         } catch (error) {
             console.log('Error restar cantidad', error);
@@ -98,9 +100,7 @@ class CarritoController extends CarritoModel {
             await renderTablaCarrito(this.carrito)
 
 
-            this.notificador.innerHTML = this.getCantidadProductos()
-            this.totales[0].innerHTML = `Total productos: ${this.getCantidadProductos()}`
-            this.totales[1].innerHTML = `Precio total: $${this.getValorCarrito()}`
+            this.setValores()
         } catch (error) {
             console.log('Error sumar cantidad', error);
         }
@@ -114,9 +114,7 @@ class CarritoController extends CarritoModel {
             localStorage.setItem('carrito', JSON.stringify(this.carrito))
 
             await renderTablaCarrito(this.carrito)
-            this.notificador.innerHTML = this.getCantidadProductos()
-            this.totales[0].innerHTML = `Total productos: ${this.getCantidadProductos()}`
-            this.totales[1].innerHTML = `Precio total: $${this.getValorCarrito()}`
+            this.setValores()
             
         } catch (error) {
             console.log(error);  

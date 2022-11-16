@@ -28,8 +28,10 @@
     
     }
     
-    &:hover {
-        color: $green;
-        background-color: $light-green;
+    @media(min-width: 1024px){
+        &:hover {
+            color: $green;
+            background-color: $light-green;
+        }
     }
 }
