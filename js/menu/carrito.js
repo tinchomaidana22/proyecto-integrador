@@ -13,7 +13,7 @@ async function renderTablaCarrito(carrito) {
         elemSectionCarrito.classList.add('section-carrito--visible')
 
     } catch (error) {
-        console.log(error);
+        console.error(error);
     }
 
 }
