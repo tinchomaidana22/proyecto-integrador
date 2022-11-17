@@ -37,7 +37,7 @@ body {
 .btn {
   background: #519872;
   border-radius: 16px;
-  border: none;
+  border: 1px solid #519872;
   color: #fcfcfc;
   cursor: pointer;
   display: flex;
@@ -63,7 +63,6 @@ body {
   .btn:hover {
     color: #519872;
     background-color: #eeffed;
-    border: 1px solid #519872;
   }
 }
 
@@ -942,6 +941,29 @@ body {
   justify-content: center;
   background-color: #eeffed;
 }
+.section-carrito--visible .carrito {
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 350px;
+}
+.section-carrito--visible .carrito::-webkit-scrollbar {
+  width: 8px;
+}
+.section-carrito--visible .carrito::-webkit-scrollbar-thumb {
+  background: #284d39;
+  border-radius: 4px;
+}
+.section-carrito--visible .carrito::-webkit-scrollbar-thumb:hover {
+  background: #519872;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.section-carrito--visible .carrito::-webkit-scrollbar-track {
+  background: #e4e4e4;
+  width: 5px;
+}
+.section-carrito--visible .carrito::-webkit-scrollbar-track:hover, .section-carrito--visible .carrito::-webkit-scrollbar-track:active {
+  background: #d3d3d3;
+}
 .section-carrito--visible h2 {
   color: #284d39;
 }
@@ -973,7 +995,7 @@ body {
 }
 @media (min-width: 1024px) {
   .section-carrito--visible {
-    width: 90vw;
+    width: 80vw;
     margin: auto;
   }
   .section-carrito--visible .cantidad {

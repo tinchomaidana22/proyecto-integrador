@@ -2,7 +2,7 @@
 .btn{
     background: $green;
     border-radius: 16px;
-    border: none;
+    border: 1px solid $green;
     color: $white;
     cursor: pointer;
     display: flex;
@@ -32,7 +32,7 @@
         &:hover {
             color: $green;
             background-color: $light-green;
-            border: 1px solid $green;
+            
         }
     }
 }
