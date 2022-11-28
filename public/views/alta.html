@@ -38,9 +38,16 @@
     </div>
 
     <!-- Foto -->
-    <div class="form__alta--div--input">
-        <input placeholder="Foto" type="text" class=" input form__input" id="foto" required="">
-        <div></div>
+    <div id="drop-area">
+        <p>Subir imagen al servidor con <b>file dialog</b> o con <b>drag and drop</b> dentro del area punteada</p>
+        <br>
+        <br>
+        <input type="file" id="foto" accept="image/*">
+        <label for="foto" class="btn">File Dialog</label>
+        <br>
+        <br>
+        <progress id="progress-bar" max="100" value="0"></progress>
+        <div id="gallery"><img src="" alt=""></div>
     </div>
 
     <!-- Envio -->

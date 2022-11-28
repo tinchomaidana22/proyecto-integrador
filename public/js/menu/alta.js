@@ -2,16 +2,21 @@ class FormularioAlta{
     inputs = null
     form = null
     button = null
-    camposValidos = [false,false,false,false,false,false,false]
+    camposValidos = [false, false, false, false, false, false]
     regExpValidar = [
-        /^.+$/,//nombre
-        /^.+$/,//precio
-        /^[0-9]+$/, //stock
-        /^.+$/,//marca
-        /^.+$/,//categoria
-        /^.+$/,//detalles
-        /^.+$/,//foto
+      /^.+$/, // regexp nombre
+      /^.+$/, // regexp precio
+      /^[0-9]+$/, // regexp stock
+      /^.+$/, // regexp marca
+      /^.+$/, // regexp categoria
+      /^.+$/, // regexp detalles
     ]
+  
+    /* --------------------------- drag and drop --------------------------- */
+    imagenSubida = ''
+    dropArea = null
+    progressBar = null
+    /* --------------------------- drag and drop --------------------------- */
 
     constructor(renderTablaAlta, guardarProducto){ 
         this.inputs = document.querySelectorAll('main form input')
@@ -40,6 +45,38 @@ class FormularioAlta{
         })
     
         productoController.obtenerProductos()
+
+        // <drag and drop>
+        this.dropArea = document.getElementById('drop-area')
+        this.progressBar = document.getElementById('progress-bar')
+
+        //cancelar el drag and drop por default
+
+        ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(event=>{
+            this.dropArea.addEventListener(event,e=> e.preventDefault())
+            document.body.addEventListener(event,e=> e.preventDefault())
+        })
+
+        // remarcar el area
+        ;['dragenter', 'dragover'].forEach(event=>{
+            this.dropArea.addEventListener(event,()=>{
+                this.dropArea.classList.add('highlight')
+            })
+        })
+
+        ;['dragleave', 'drop'].forEach(event=>{
+            this.dropArea.addEventListener(event,()=>{
+                this.dropArea.classList.remove('highlight')
+            })
+        })
+
+        this.dropArea.addEventListener('drop', e =>{
+            const dataTransfer = e.dataTransfer
+            const files = dataTransfer.files
+
+            this.handleFiles(files)
+        })
+        // </drag and drop>
         
     }
 
@@ -51,8 +88,7 @@ class FormularioAlta{
             this.camposValidos[2]&&
             this.camposValidos[3]&&
             this.camposValidos[4]&&
-            this.camposValidos[5]&&
-            this.camposValidos[6]
+            this.camposValidos[5]
     
         return !valido
     }
@@ -88,7 +124,6 @@ class FormularioAlta{
             marca:this.inputs[3].value,
             categoria:this.inputs[4].value,
             detalles:this.inputs[5].value,
-            foto:this.inputs[6].value,
             envio:this.inputs[7].checked
         }
     }
@@ -100,8 +135,59 @@ class FormularioAlta{
         })
     
         this.btn.disabled=true
-        this.camposValidos = [false,false,false,false,false,false,false]
+        this.camposValidos = [false,false,false,false,false,false]
     }
+
+    // <drag and drop>
+    initializeProgress(){
+        this.progressBar.value = 0
+    }
+
+    updateProgress(porcentaje){
+        this.progressBar.value = porcentaje
+    }
+
+    previewFile(file){
+        const reader = new FileReader()
+        reader.readAsDataURL(file)
+
+        reader.onloadend = ()=>{
+            const img = document.querySelector('#gallery img')
+            img.src = reader.result
+        }
+    }
+
+    handleFiles(files){
+        const file = files[0]
+        this.initializeProgress()
+        this.uploadFile(file)
+        this.previewFile(file)
+    }
+    
+    uploadFile(file){
+        const url = '/api/upload'
+
+        const xhr = new XMLHttpRequest()
+        const formData = new FormData()
+
+        xhr.open('POST', url)
+
+        xhr.upload.addEventListener('progress', e=>{
+            let porcentaje = (((e.loaded*100)/e.total)||100)
+            this.updateProgress(porcentaje)
+        })
+
+        xhr.addEventListener('load', ()=>{
+            if (xhr.status===200) {
+                const objImg = JSON.parse(xhr.response)
+                this.imagenSubida = objImg.nombre
+            }
+        })
+
+        formData.append('foto', file)
+        xhr.send(formData)
+    }
+    // </drag and drop>
 }
 
 /* FUNCTIONS AND GLOBAL VARIABLES DECLARATIONS */
